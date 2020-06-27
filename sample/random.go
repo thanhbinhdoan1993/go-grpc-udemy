@@ -4,6 +4,7 @@ import (
 	"math/rand"
 	"time"
 
+	"github.com/google/uuid"
 	"github.com/thanhbinhdoan1993/go-grpc-udemy/pb"
 )
 
@@ -84,4 +85,45 @@ func randomInt(min int, max int) int {
 
 func randomFloat64(min float64, max float64) float64 {
 	return min + rand.Float64()*(max-min)
+}
+
+func randomFloat32(min float32, max float32) float32 {
+	return min + rand.Float32()*(max-min)
+}
+
+func randomScreenPanel() pb.Screen_Panel {
+	if rand.Intn(2) == 1 {
+		return pb.Screen_IPS
+	}
+	return pb.Screen_OLED
+}
+
+func randomScreenResolution() *pb.Screen_Resolution {
+	height := randomInt(1080, 4320)
+	width := height * 16 / 9
+
+	resolution := &pb.Screen_Resolution{
+		Height: uint32(height),
+		Width:  uint32(width),
+	}
+	return resolution
+}
+
+func randomID() string {
+	return uuid.New().String()
+}
+
+func randomLaptopBrand() string {
+	return randomStringFromSet("Apple", "Dell", "Lenovo")
+}
+
+func randomLaptopName(brand string) string {
+	switch brand {
+	case "Apple":
+		return randomStringFromSet("Macbook Air", "Macbook Pro")
+	case "Dell":
+		return randomStringFromSet("Latitude", "Vostro", "XPS", "Alienware")
+	default:
+		return randomStringFromSet("Thinkpad X1", "Thinkpad P1", "Thinkpad P53")
+	}
 }

@@ -1,0 +1,62 @@
+{
+  "id": "7cc6fa59-31e3-4f9e-b5d8-5015916ee471",
+  "brand": "Apple",
+  "name": "Macbook Air",
+  "cpu": {
+    "brand": "AMD",
+    "name": "Ryzen 5 PRO 2500U",
+    "number_cores": 7,
+    "number_threads": 10,
+    "min_ghz": 2.627629483960873,
+    "max_ghz": 3.90084602625315
+  },
+  "ram": {
+    "value": "15",
+    "unit": "GIGABYTE"
+  },
+  "gpus": [
+    {
+      "brand": "AMD",
+      "name": "RX Vega-56",
+      "min_ghz": 1.452296101720525,
+      "max_ghz": 1.9863111823241622,
+      "memory": {
+        "value": "3",
+        "unit": "GIGABYTE"
+      }
+    }
+  ],
+  "storages": [
+    {
+      "driver": "SSD",
+      "memory": {
+        "value": "385",
+        "unit": "GIGABYTE"
+      }
+    },
+    {
+      "driver": "HDD",
+      "memory": {
+        "value": "2",
+        "unit": "TERABYTE"
+      }
+    }
+  ],
+  "screen": {
+    "size_inch": 16.758638,
+    "resolution": {
+      "width": 5120,
+      "height": 2880
+    },
+    "panel": "OLED",
+    "multitouch": false
+  },
+  "keyboard": {
+    "layout": "AZERTY",
+    "backlit": true
+  },
+  "weight_kg": 1.1522290858978914,
+  "price_usd": 1762.167367729969,
+  "release_year": 2016,
+  "updated_at": "2020-06-27T10:01:15.312284Z"
+}
